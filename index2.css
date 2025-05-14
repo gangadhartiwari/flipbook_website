@@ -2,7 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 #navbar {
     width: 100%;
@@ -12,11 +14,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 15px;
+    /* position: fixed;
+    top: 0px; */
 
 }
 
 #navbar img{
-    width: 100px;
+    width: 150px;
+    height: 160px;
 }
 
 #navbar nav ul {
@@ -33,22 +38,245 @@
 }
 
 #navbar nav ul li a:hover{
-    color: rgb(250, 126, 101);
+    color: rgb(214, 21, 150);
     /* font-size: 20px; */
 }
 
 #navbar .icon {
     display: flex;
-    gap: 15px;
+    gap: 25px;
 }
 
 #navbar .call{
     display: flex;
     gap: 10px;
-    border: 1px solid rgb(250, 126, 101);
-    background-color:  rgb(250, 126, 101);
+    border: 1px solid rgb(24, 35, 71);
+    background-color:  rgb(105, 51, 116);
     border-radius: 20px;
-    padding: 5px 20px;
+    padding: 8px 25px;
     color: white;
     font-size: 15px;
 }
+
+#navbar2 {
+    width: 100%;
+    height: 550px; /* Increased height */
+    background: linear-gradient(90deg, rgb(105, 51, 116), rgb(24, 35, 71)); /* Same theme */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Left block with heading and subtext */
+#navbar2 nav div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#navbar2 h1 {
+    
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#navbar2 p {
+    font-size: 16px;
+    font-weight: 500;
+    /* opacity: 0.9; */
+    margin-bottom: 8px;
+}
+
+/* Persona links */
+#navbar2 nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+#navbar2 nav a:hover {
+    color: #ffeb3b;
+    transform: scale(1.05);
+    text-shadow: 1px 1px 2px black;
+}
+
+/* ==== Enhanced Persona Section Styling ==== */
+
+section {
+    margin: 60px auto;
+    padding: 60px 40px;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.01);
+}
+
+section h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #d4145a, #fbb03b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+section h3 {
+    font-size: 1.6rem;
+    color: #2c2e4a;
+    margin: 25px 0 12px;
+    position: relative;
+}
+
+section h3::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    bottom: -8px;
+    left: 0;
+    background: linear-gradient(90deg, #ff6f61, #6a0572);
+    border-radius: 3px;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #242424;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+section img {
+    width: 100%;
+    max-width: 850px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+section img:hover {
+    transform: scale(1.02);
+}
+
+/* Fancy workflow or note block */
+.workflow-diagram {
+    background: linear-gradient(135deg, #c471f5, #fa71cd);
+    color: white;
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.skill-list,
+.roadmap-list {
+    margin: 20px 0 30px 30px;
+    padding-left: 20px;
+}
+
+.skill-list li,
+.roadmap-list li {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.7;
+    list-style-type: square;
+}
+
+/* Section Divider */
+.section-divider {
+    width: 80%;
+    height: 4px;
+    background: linear-gradient(to right, #a18cd1, #fbc2eb);
+    border-radius: 2px;
+    margin: 60px auto;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+#bars{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 420px) {
+
+    #bars{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 5px;
+        z-index: 100;
+        font-size: 30px;
+    
+    }
+    section {
+        padding: 40px 20px;
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+    }
+
+    section h3 {
+        font-size: 1.3rem;
+    }
+
+    .workflow-diagram {
+        padding: 15px 18px;
+    }
+
+    .skill-list li, .roadmap-list li {
+        font-size: 0.95rem;
+    }
+
+    #navbar nav ul{
+        display: none;
+    }
+
+    #navbar .icon{
+        display: none;
+    }
+
+    #navbar .call{
+        display: none;
+    }
+
+     #check:checked~ #navbar nav ul {
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 30%;
+        top: 70px;
+        background-color: rgb(105, 51, 116);
+    }
+}
+
