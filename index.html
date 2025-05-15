@@ -1,62 +1,457 @@
-<!-- Project Goal:
-
-Create a beautiful, responsive Persona Flipbook website with four 
-personas — Student, Developer, Designer, and Traveler — using only HTML and CSS (no JavaScript). -->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Persona Flipbook</title>
     <link rel="stylesheet" href="flipbookstyle.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+   
+  </head>
+  <body>
+    <label for="check" id="bars"><i class="fa-solid fa-bars"></i></label>
+    <input type="checkbox" id="check">
 
-</head>
-<body>
-
-    <!-- Navbar codes start from here -->
-    <header>
-        <nav>
-            <div>
-                <h1>The Persona Flipbook</h1>
-                <p>Select a persona to explore:</p>
-                <a href="#student">👩‍🎓 Student</a> |
-                <a href="#developer">💻 Developer</a> |
-                <a href="#designer">🎨 Designer</a> |
-                <a href="#traveler">✈️ Traveler</a>
-            </div>
-        </nav>
+    <header id="navbar">
+      <img src="logo-transparent.png" alt="Logo" />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="icon">
+        <i class="fa-solid fa-circle-user"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="call">
+        <i class="fa-solid fa-phone-volume"></i>
+        <p>Call: 9009664469</p>
+      </div>
     </header>
 
-    <!-- Main part of our website -->
+    <header id="navbar2">
+      <nav>
+        <div>
+          <marquee direction="left" scrollamount="10">
+            <h1>The Persona Flipbook</h1>
+          </marquee>
+          <p>Select a persona to explore:</p>
+          <div class="persona-links">
+            <a href="#student">👩‍🎓 Student</a> |
+            <a href="#developer">💻 Developer</a> |
+            <a href="#designer">🎨 Designer</a> |
+            <a href="#traveler">✈️ Traveler</a> |
+            <a href="#data-analyst">📊 Data Analyst</a> |
+            <a href="#data-scientist">🤖 Data Scientist</a> |
+            <a href="#businessman">💼 Businessman</a> |
+            <a href="#influencer">📣 Influencer</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <main>
+      <section id="student" class="persona-section" style="background-color:#fff3f0">
+        <h2>👩‍🎓 Student</h2>
+        <p>Students are learners in schools, colleges, or universities. Their primary focus is acquiring knowledge and building skills for a future career.</p>
+        <img src="Student1" alt="Student Persona" class="persona-image" />
+        <h3>Challenges</h3>
+        <ul>
+          <li>Time management and academic pressure</li>
+          <li>Choosing the right career path</li>
+          <li>Lack of access to quality resources</li>
+        </ul>
+        <h3>How to Succeed</h3>
+        <p>Stay organized, seek mentorship, explore diverse fields, and focus on holistic development.</p>
+        <h3>Required Skills</h3>
+        <ul>
+          <li>Critical thinking</li>
+          <li>Communication</li>
+          <li>Research and digital literacy</li>
+        </ul>
+        <h3>Roadmap</h3>
+        <ol>
+          <li>Focus on foundational subjects</li>
+          <li>Get involved in extracurricular activities</li>
+          <li>Explore internships and side projects</li>
+          <li>Decide your long-term career goals</li>
+        </ol>
+        <img src="student_workflow.png" alt="Student Workflow" class="workflow-diagram" />
+      </section>
 
-        <section id="student">
-            <h2>👩‍🎓 The Student</h2>
-            <p>This section will talk about the journey of a student.</p>
-        </section>
+      
+      <!-- 💻 Developer Section -->
+      <section
+        id="developer"
+        class="persona-section"
+        style="background-color: #f5faff"
+      >
+        <h2>💻 Developer</h2>
+        <p>
+          Developers build software, websites, and applications that power
+          digital experiences. They are key to the tech world.
+        </p>
 
-        <section id="developer">
-            <h2>💻 The Developer</h2>
-            <p>This section will talk about the journey of a developer.</p>
-        </section>
+        <img
+          src="Developer.jpg"
+          alt="Developer Persona"
+          class="persona-image"
+        />
 
-        <section id="designer">
-            <h2>🎨 The Designer</h2>
-            <p>This section will talk about the journey of a designer.</p>
-        </section>
+        <h3>Challenges</h3>
+        <ul>
+          <li>Keeping up with rapidly changing technologies</li>
+          <li>Debugging complex code</li>
+          <li>Balancing performance and deadlines</li>
+        </ul>
 
-        <section id="traveler">
-            <h2>✈️ The Traveler</h2>
-            <p>This section will talk about the journey of a traveler.</p>
-        </section>
+        <h3>How to Succeed</h3>
+        <p>
+          Build a portfolio, contribute to open source, and keep learning new
+          frameworks and tools.
+        </p>
 
+        <h3>Required Skills</h3>
+        <ul>
+          <li>Programming (JavaScript, Python, etc.)</li>
+          <li>Version control (Git)</li>
+          <li>Problem solving and system design</li>
+        </ul>
+
+        <h3>Roadmap</h3>
+        <ol>
+          <li>Learn the basics of programming</li>
+          <li>Understand data structures and algorithms</li>
+          <li>Build small projects</li>
+          <li>Contribute to open source / freelance</li>
+        </ol>
+
+        <img
+          src="dev_wrkflow.png"
+          alt="Developer Workflow"
+          class="workflow-diagram"
+        />
+      </section>
+
+      <!-- 🎨 Designer Section -->
+      <section
+        id="designer"
+        class="persona-section"
+        style="background-color: #fff8fc"
+      >
+        <h2>🎨 Designer</h2>
+        <p>
+          Designers create visuals, experiences, and user interfaces that are
+          intuitive and engaging.
+        </p>
+
+        <img src="Designer.jpg" alt="Designer Persona" class="persona-image" />
+
+        <h3>Challenges</h3>
+        <ul>
+          <li>Client expectations and revisions</li>
+          <li>Balancing creativity with practicality</li>
+          <li>Staying up-to-date with design trends</li>
+        </ul>
+
+        <h3>How to Succeed</h3>
+        <p>
+          Keep an updated design portfolio, master UI/UX tools, and study human
+          behavior and accessibility.
+        </p>
+
+        <h3>Required Skills</h3>
+        <ul>
+          <li>Adobe Suite / Figma / Sketch</li>
+          <li>Typography and color theory</li>
+          <li>User-centered design</li>
+        </ul>
+
+        <h3>Roadmap</h3>
+        <ol>
+          <li>Learn the fundamentals of design</li>
+          <li>Study UI/UX principles</li>
+          <li>Practice with mock projects</li>
+          <li>Create a portfolio and network</li>
+        </ol>
+
+        <img
+          src="DESIGNER_WORKFLOW.jpeg"
+          alt="Designer Workflow"
+          class="workflow-diagram"
+        />
+      </section>
+
+      <!-- ✈️ Traveler Section -->
+      <section
+        id="traveler"
+        class="persona-section"
+        style="background-color: #f8fff6"
+      >
+        <h2>✈️ Traveler</h2>
+        <p>
+          Travelers explore different cultures, cuisines, and places. They gain
+          new perspectives and experiences through their journeys.
+        </p>
+
+        <img src="Traveller.jpg" alt="Traveler Persona" class="persona-image" />
+
+        <h3>Challenges</h3>
+        <ul>
+          <li>Budget constraints</li>
+          <li>Logistics and planning</li>
+          <li>Safety and health concerns</li>
+        </ul>
+
+        <h3>How to Succeed</h3>
+        <p>
+          Plan ahead, prioritize experiences, use travel apps, and document your
+          journey through blogs or vlogs.
+        </p>
+
+        <h3>Required Skills</h3>
+        <ul>
+          <li>Planning and budgeting</li>
+          <li>Communication and cultural adaptability</li>
+          <li>Photography/videography</li>
+        </ul>
+
+        <h3>Roadmap</h3>
+        <ol>
+          <li>Research destinations</li>
+          <li>Create a travel budget</li>
+          <li>Start with local trips</li>
+          <li>Build a travel blog or Instagram</li>
+        </ol>
+
+        <img
+          src="Traveller_workflow (2).png"
+          alt="Traveler Workflow"
+          class="workflow-diagram"
+        />
+      </section>
+
+      <!-- 📊 Data Analyst Section -->
+      <section
+        id="data-analyst"
+        class="persona-section"
+        style="background-color: #fffef6"
+      >
+        <h2>📊 Data Analyst</h2>
+        <p>
+          Data Analysts interpret data to help organizations make informed
+          decisions through reports and dashboards.
+        </p>
+
+        <img
+          src="Data_analyst_img.jpg"
+          alt="Data Analyst Persona"
+          class="persona-image"
+        />
+
+        <h3>Challenges</h3>
+        <ul>
+          <li>Handling large datasets</li>
+          <li>Data cleaning and accuracy</li>
+          <li>Communicating findings to non-technical teams</li>
+        </ul>
+
+        <h3>How to Succeed</h3>
+        <p>
+          Master Excel, SQL, Power BI, and statistics. Focus on story-telling
+          and visualizations.
+        </p>
+
+        <h3>Required Skills</h3>
+        <ul>
+          <li>Excel, SQL, Python</li>
+          <li>Power BI / Tableau</li>
+          <li>Statistical thinking</li>
+        </ul>
+
+        <h3>Roadmap</h3>
+        <ol>
+          <li>Learn Excel & SQL</li>
+          <li>Master data cleaning and visualizations</li>
+          <li>Work on real datasets</li>
+          <li>Create dashboards and reports</li>
+        </ol>
+
+        <img
+          src="DA_wrkflow.svg"
+          alt="Data Analyst Workflow"
+          class="workflow-diagram"
+        />
+      </section>
+
+      <!-- 🤖 Data Scientist Section -->
+      <section
+        id="data-scientist"
+        class="persona-section"
+        style="background-color: #f5f5ff"
+      >
+        <h2>🤖 Data Scientist</h2>
+        <p>
+          Data Scientists extract insights and build predictive models using
+          statistics, machine learning, and programming.
+        </p>
+
+        <img src="DS.png" alt="Data Scientist Persona" class="persona-image" />
+
+        <h3>Challenges</h3>
+        <ul>
+          <li>Model accuracy and bias</li>
+          <li>High learning curve in ML</li>
+          <li>Complexity of data pipelines</li>
+        </ul>
+
+        <h3>How to Succeed</h3>
+        <p>
+          Strong foundation in math, stats, ML, and Python. Work on real-world
+          problems and competitions (e.g., Kaggle).
+        </p>
+
+        <h3>Required Skills</h3>
+        <ul>
+          <li>Python, ML, Deep Learning</li>
+          <li>SQL, Statistics, EDA</li>
+          <li>Cloud & Big Data (optional)</li>
+        </ul>
+
+        <h3>Roadmap</h3>
+        <ol>
+          <li>Learn Python and stats</li>
+          <li>Master ML and deep learning</li>
+          <li>Work on datasets and projects</li>
+          <li>Publish on GitHub / Kaggle</li>
+        </ol>
+
+        <img
+          src="DS_wrkflow.png"
+          alt="Data Scientist Workflow"
+          class="workflow-diagram"
+        />
+      </section>
+
+      <!-- 💼 Businessman Section -->
+      <section
+        id="businessman"
+        class="persona-section"
+        style="background-color: #fffaf5"
+      >
+        <h2>💼 Businessman</h2>
+        <p>
+          Businessmen identify opportunities, build companies, and manage teams
+          and operations to generate revenue and impact.
+        </p>
+
+        <img
+          src="Businessman.jpg"
+          alt="Businessman Persona"
+          class="persona-image"
+        />
+
+        <h3>Challenges</h3>
+        <ul>
+          <li>Risk management and funding</li>
+          <li>Market competition</li>
+          <li>Building a strong team</li>
+        </ul>
+
+        <h3>How to Succeed</h3>
+        <p>
+          Focus on problem-solving, team leadership, and strategic thinking. Use
+          lean startup principles.
+        </p>
+
+        <h3>Required Skills</h3>
+        <ul>
+          <li>Leadership and communication</li>
+          <li>Financial and market knowledge</li>
+          <li>Growth and branding</li>
+        </ul>
+
+        <h3>Roadmap</h3>
+        <ol>
+          <li>Identify a problem and market</li>
+          <li>Create MVP and validate idea</li>
+          <li>Form a team and raise capital</li>
+          <li>Scale and optimize</li>
+        </ol>
+
+        <img
+          src="business_workflow.png"
+          alt="Businessman Workflow"
+          class="workflow-diagram"
+        />
+      </section>
+
+      <!-- 📣 Influencer Section -->
+      <section
+        id="influencer"
+        class="persona-section"
+        style="background-color: #fff5fb"
+      >
+        <h2>📣 Influencer</h2>
+        <p>
+          Influencers build audiences on social media platforms and promote
+          brands or ideas through engaging content.
+        </p>
+
+        <img
+          src="Influencer.jpg"
+          alt="Influencer Persona"
+          class="persona-image"
+        />
+
+        <h3>Challenges</h3>
+        <ul>
+          <li>Content consistency and creativity</li>
+          <li>Dealing with online criticism</li>
+          <li>Maintaining authenticity</li>
+        </ul>
+
+        <h3>How to Succeed</h3>
+        <p>
+          Create authentic, niche content. Collaborate with brands and focus on
+          real engagement over vanity metrics.
+        </p>
+
+        <h3>Required Skills</h3>
+        <ul>
+          <li>Video editing and storytelling</li>
+          <li>Personal branding</li>
+          <li>Marketing & community building</li>
+        </ul>
+
+        <h3>Roadmap</h3>
+        <ol>
+          <li>Select your niche</li>
+          <li>Post content consistently</li>
+          <li>Engage with followers</li>
+          <li>Collaborate with other influencers/brands</li>
+        </ol>
+
+        <img
+          src="Influencer_workflow.png"
+          alt="Influencer Workflow"
+          class="workflow-diagram"
+        />
+      </section>
+  
     </main>
 
-    <!-- Footer starts from here -->
     <footer>
-        <p>© 2025 The Persona Flipbook. All rights reserved.</p>
+      &copy; 2025 Dheeru Tiwari. All rights reserved.
     </footer>
-
-</body>
+  </body>
 </html>

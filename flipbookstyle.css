@@ -1,50 +1,194 @@
-/* Basic reset for margin and padding */
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Header styling */
-header {
-  background-color: #f2f2f2;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Navigation links */
-nav a {
-  text-decoration: none;
+body {
+  background: #f3f3f3;
   color: #333;
-  margin: 0 10px;
-  font-weight: bold;
 }
 
-nav a:hover {
-  color: #007BFF;
+#navbar {
+  width: 100%;
+  height: 70px;
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  /* position: fixed;
+    top: 0px; */
+
 }
 
-/* Section styling */
-main {
+#navbar img {
+  width: 150px;
+  height: 160px;
+}
+
+#navbar nav ul {
+
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+#navbar nav ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+#navbar nav ul li a:hover {
+  color: rgb(214, 21, 150);
+  /* font-size: 20px; */
+}
+
+#navbar .icon {
+  display: flex;
+  gap: 25px;
+}
+
+#navbar .call {
+  display: flex;
+  gap: 10px;
+  border: 1px solid rgb(24, 35, 71);
+  background-color: rgb(105, 51, 116);
+  border-radius: 20px;
+  padding: 8px 25px;
+  color: white;
+  font-size: 15px;
+}
+
+
+header#navbar2 {
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  text-align: center;
   padding: 20px;
+  color: white;
 }
 
-section {
-  margin-bottom: 30px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  background-color: #fafafa;
+header#navbar2 h1 {
+  font-size: 2em;
 }
 
-section h2 {
+#navbar2 nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+#navbar2 nav a:hover {
+  color: #ffeb3b;
+  transform: scale(1.05);
+  text-shadow: 1px 1px 2px black;
+}
+
+
+main {
+  padding: 30px;
+}
+
+.persona-section {
+  padding: 30px;
+  margin-bottom: 50px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.persona-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.persona-image {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.workflow-diagram {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 30px auto;
+  border: 2px dashed #888;
+  border-radius: 12px;
+}
+
+ul,
+ol {
+  padding-left: 30px;
+  margin: 10px 0;
+}
+
+h3 {
+  margin-top: 20px;
   color: #444;
 }
 
-/* Footer styling */
-footer {
-  background-color: #f2f2f2;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
+#bars {
+  display: none;
 }
 
+#check {
+  display: none;
+}
+
+@media (max-width: 468px) {
+
+  #bars {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    z-index: 100;
+    font-size: 30px;
+
+    nav ul {
+      flex-direction: column;
+      background: #111;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      display: none;
+    }
+
+    #check:checked~header nav ul {
+      display: flex;
+    }
+
+    #bars {
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      color: white;
+      font-size: 22px;
+      z-index: 1000;
+    }
+
+    header#navbar {
+      flex-wrap: wrap;
+    }
+  }
+
+  footer {
+    background: #0a0a23;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    margin-top: 40px;
+  }
+}
