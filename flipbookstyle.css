@@ -116,6 +116,11 @@ main {
   border-radius: 10px;
 }
 
+.persona-image:hover {
+  transform: scale(1.05);
+
+}
+
 .workflow-diagram {
   width: 100%;
   max-width: 700px;
@@ -123,6 +128,10 @@ main {
   margin: 30px auto;
   border: 2px dashed #888;
   border-radius: 12px;
+}
+
+.workflow-diagram:hover {
+  transform: scale(1.05);
 }
 
 ul,
@@ -146,15 +155,18 @@ h3 {
 
 @media (max-width: 468px) {
 
+
   #bars {
     display: block;
     position: absolute;
-    top: 20px;
-    right: 5px;
-    z-index: 100;
-    font-size: 30px;
+    top: 15px;
+    right: 15px;
+    color: rgb(7, 2, 2);
+    font-size: 22px;
+    /* z-index: 1000; */
+  }
 
-    nav ul {
+  /* nav ul {
       flex-direction: column;
       background: #111;
       position: absolute;
@@ -162,28 +174,47 @@ h3 {
       left: 0;
       width: 100%;
       display: none;
-    }
+    } */
 
-    #check:checked~header nav ul {
-      display: flex;
-    }
+  #navbar nav ul {
+    display: none;
+  }
 
-    #bars {
-      display: block;
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      color: white;
-      font-size: 22px;
-      z-index: 1000;
-    }
+  #navbar .icon {
+    display: none;
+  }
+
+  #navbar .call {
+    display: none;
+  }
+
+
+  #check:checked~header nav ul {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 20%;
+    top: 70px;
+    background-color: rgb(204, 52, 146);
+    z-index: 1000;
+  }
+
+  #navbar img {
+    width: 96px;
+    height: 86px;
+
 
     header#navbar {
       flex-wrap: wrap;
     }
   }
 
+
+
+
   footer {
+    height: 100px;
+    width: 100%;
     background: #0a0a23;
     color: white;
     text-align: center;
@@ -191,4 +222,5 @@ h3 {
     font-size: 0.9em;
     margin-top: 40px;
   }
+
 }
