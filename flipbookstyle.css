@@ -114,6 +114,7 @@ main {
   display: block;
   margin: 20px auto;
   border-radius: 10px;
+  
 }
 
 .persona-image:hover {
@@ -213,7 +214,7 @@ h3 {
       flex-wrap: wrap;
     }
   }
-
+}
   footer {
     height: 100px;
     width: 100%;
@@ -225,4 +226,3 @@ h3 {
     margin-top: 40px;
   }
 
-}
