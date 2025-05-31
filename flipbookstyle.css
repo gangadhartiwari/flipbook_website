@@ -160,76 +160,67 @@ ol {
   padding-left: 30px;
   margin: 10px 0;
 }
-
-/* Container to center the animated box */
+/* Container to hold the moving box */
 #greet-container {
   width: 100%;
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff3f0;
   margin-bottom: 20px;
 }
 
-/* The animated box itself */
+/* The box that moves left to right */
 #greet-box {
-  width: 100px;
-  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: rgb(223, 160, 82);
-  cursor: pointer;
-  animation: changeColor 5s ease infinite;
-  border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-/* Slight scale on hover */
-#greet-box:hover {
-  transform: scale(1.1);
-}
-
-/* The greeting text is hidden initially */
-#greet-text {
-  display: none;
-  margin-top: 15px;
-  font-size: 18px;
-  color: #333;
+  color: white;
   font-weight: 600;
+  font-size: 18px;
+  padding: 15px 25px;
+  border-radius: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+  /* Animation that moves the box left to right */
+  animation: slideRight 6s linear infinite,
+             colorSizeChange 6s ease-in-out infinite;
 }
 
-/* Show greeting when checkbox is checked */
-#greet-toggle:checked + #greet-box + #greet-text {
-  display: block;
-}
-
-/* Animation keyframes */
-@keyframes changeColor {
+/* Move from left: 0 to right: calc(100% - box width) */
+@keyframes slideRight {
   0% {
-    background-color: rgb(223, 160, 82);
-    border-radius: 12px;
-    transform: translateX(0) scale(1);
-  }
-  25% {
-    background-color: brown;
-    border-radius: 50%;
-    transform: translateX(50px) scale(1.1);
-  }
-  50% {
-    background-color: cadetblue;
-    border-radius: 12px;
-    transform: translateX(100px) scale(1.3);
-  }
-  75% {
-    background-color: chocolate;
-    border-radius: 50%;
-    transform: translateX(50px) scale(1.1);
+    left: 0;
   }
   100% {
-    background-color: rgb(223, 160, 82);
-    border-radius: 12px;
-    transform: translateX(0) scale(1);
+    left: calc(100% - 300px); /* Adjust 300px to box width */
   }
+}
+
+/* Animate text color and size */
+@keyframes colorSizeChange {
+  0% {
+    color: white;
+    font-size: 18px;
+  }
+  50% {
+    color: #b1127e;
+    font-size: 22px;
+  }
+  100% {
+    color: white;
+    font-size: 18px;
+  }
+}
+
+/* Pause animation on hover */
+#greet-box:hover {
+  animation-play-state: paused;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
 
