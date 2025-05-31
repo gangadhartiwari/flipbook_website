@@ -14,14 +14,10 @@ body {
 #navbar {
   width: 100%;
   height: 70px;
-  /* border: 2px solid black; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 15px;
-  /* position: fixed;
-    top: 0px; */
-
 }
 
 #navbar img {
@@ -30,7 +26,6 @@ body {
 }
 
 #navbar nav ul {
-
   display: flex;
   gap: 15px;
   list-style: none;
@@ -44,7 +39,6 @@ body {
 
 #navbar nav ul li a:hover {
   color: rgb(214, 21, 150);
-  /* font-size: 20px; */
 }
 
 #navbar .icon {
@@ -62,7 +56,6 @@ body {
   color: white;
   font-size: 15px;
 }
-
 
 header#navbar2 {
   background: linear-gradient(to right, #6dd5ed, #2193b0);
@@ -91,7 +84,6 @@ header#navbar2 h1 {
   text-shadow: 1px 1px 2px black;
 }
 
-
 main {
   padding: 30px;
 }
@@ -101,6 +93,22 @@ main {
   margin-bottom: 50px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* ✅ New content styles added */
+.persona-section p,
+.persona-section ul,
+.persona-section ol {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.persona-section ul li,
+.persona-section ol li {
+  margin-bottom: 8px;
 }
 
 .persona-section h2 {
@@ -108,21 +116,28 @@ main {
   margin-bottom: 10px;
 }
 
+/* ✅ Highlighted h3 headings */
+.persona-section h3 {
+  margin-top: 20px;
+  color: #b1127e; /* deep pink shade */
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* existing image styles */
 .persona-image {
   width: 100%;
   max-width: 600px;
   display: block;
   margin: 20px auto;
   border-radius: 10px;
-  
 }
 
 .persona-image:hover {
   transform: scale(1.05);
   color: #ffeb3b;
   box-shadow: 5px 5px 5px rgb(129, 149, 151);
-
-
 }
 
 .workflow-diagram {
@@ -146,11 +161,6 @@ ol {
   margin: 10px 0;
 }
 
-h3 {
-  margin-top: 20px;
-  color: #444;
-}
-
 #bars {
   display: none;
 }
@@ -160,8 +170,6 @@ h3 {
 }
 
 @media (max-width: 568px) {
-
-
   #bars {
     display: block;
     position: absolute;
@@ -169,33 +177,18 @@ h3 {
     right: 15px;
     color: rgb(7, 2, 2);
     font-size: 22px;
-    /* z-index: 1000; */
   }
-
-  /* nav ul {
-      flex-direction: column;
-      background: #111;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      display: none;
-    } */
 
   #navbar nav ul {
     display: none;
   }
 
-  #navbar .icon {
-    display: none;
-  }
-
+  #navbar .icon,
   #navbar .call {
     display: none;
   }
 
-
-  #check:checked~header nav ul {
+  #check:checked ~ header nav ul {
     display: block;
     width: 100%;
     position: absolute;
@@ -208,21 +201,64 @@ h3 {
   #navbar img {
     width: 96px;
     height: 86px;
+  }
 
-
-    header#navbar {
-      flex-wrap: wrap;
-    }
+  header#navbar {
+    flex-wrap: wrap;
   }
 }
-  footer {
-    height: 100px;
-    width: 100%;
-    background: #0a0a23;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9em;
-    margin-top: 40px;
-  }
 
+footer {
+  width: 100%;
+  background: #0a0a23;
+  color: white;
+  font-size: 0.95em;
+  margin-top: 40px;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+footer h3 {
+  color: #ff4081;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff4081;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 0.85em;
+  margin-top: 20px;
+  color: #aaa;
+}
