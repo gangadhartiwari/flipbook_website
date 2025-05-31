@@ -170,43 +170,80 @@ ol {
 }
 
 @media (max-width: 568px) {
+  /* Show menu icon */
   #bars {
     display: block;
     position: absolute;
     top: 15px;
     right: 15px;
-    color: rgb(7, 2, 2);
-    font-size: 22px;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
   }
 
-  #navbar nav ul {
+  /* Hide checkbox */
+  #check {
     display: none;
   }
 
+  /* Wrap and fix header */
+  header#navbar {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    position: relative;
+    z-index: 1000;
+    background-color: white;
+  }
+
+  #navbar img {
+    width: 90px;
+    height: 80px;
+  }
+
+  /* Hide menu links and extra items by default */
+  #navbar nav ul,
   #navbar .icon,
   #navbar .call {
     display: none;
   }
 
+  /* Show menu when clicked */
   #check:checked ~ header nav ul {
     display: block;
+    background-color: #f4c2d7;
     width: 100%;
-    position: absolute;
-    left: 20%;
-    top: 70px;
-    background-color: rgb(204, 52, 146);
-    z-index: 1000;
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 999;
   }
 
-  #navbar img {
-    width: 96px;
-    height: 86px;
+  #check:checked ~ header nav ul li {
+    margin: 10px 0;
+    text-align: left;
   }
 
-  header#navbar {
-    flex-wrap: wrap;
+  #check:checked ~ header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px;
+    display: inline-block;
+  }
+
+  #check:checked ~ header nav ul li a:hover {
+    color: #b1127e;
+  }
+
+  /* Add space below navbar1 so navbar2 doesn't overlap */
+  #navbar {
+    margin-bottom: 20px;
   }
 }
+
 
 footer {
   width: 100%;
