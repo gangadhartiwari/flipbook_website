@@ -119,7 +119,8 @@ main {
 /* ✅ Highlighted h3 headings */
 .persona-section h3 {
   margin-top: 20px;
-  color: #b1127e; /* deep pink shade */
+  color: #b1127e;
+  /* deep pink shade */
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -135,6 +136,7 @@ main {
 }
 
 .persona-image:hover {
+  font-size: 30px;
   transform: scale(1.05);
   color: #ffeb3b;
   box-shadow: 5px 5px 5px rgb(129, 149, 151);
@@ -160,6 +162,7 @@ ol {
   padding-left: 30px;
   margin: 10px 0;
 }
+
 /* Container to hold the moving box */
 #greet-container {
   width: 100%;
@@ -184,11 +187,11 @@ ol {
   border-radius: 12px;
   white-space: nowrap;
   cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
   /* Animation that moves the box left to right */
   animation: slideRight 6s linear infinite,
-             colorSizeChange 6s ease-in-out infinite;
+    colorSizeChange 6s ease-in-out infinite;
 }
 
 /* Move from left: 0 to right: calc(100% - box width) */
@@ -196,8 +199,10 @@ ol {
   0% {
     left: 0;
   }
+
   100% {
-    left: calc(100% - 300px); /* Adjust 300px to box width */
+    left: calc(100% - 300px);
+    /* Adjust 300px to box width */
   }
 }
 
@@ -207,10 +212,12 @@ ol {
     color: white;
     font-size: 18px;
   }
+
   50% {
     color: #b1127e;
     font-size: 22px;
   }
+
   100% {
     color: white;
     font-size: 18px;
@@ -220,7 +227,7 @@ ol {
 /* Pause animation on hover */
 #greet-box:hover {
   animation-play-state: paused;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -233,6 +240,7 @@ ol {
 }
 
 @media (max-width: 568px) {
+
   /* Show menu icon */
   #bars {
     display: block;
@@ -274,7 +282,7 @@ ol {
   }
 
   /* Show menu when clicked */
-  #check:checked ~ header nav ul {
+  #check:checked~header nav ul {
     display: block;
     background-color: #f4c2d7;
     width: 100%;
@@ -284,12 +292,12 @@ ol {
     z-index: 999;
   }
 
-  #check:checked ~ header nav ul li {
+  #check:checked~header nav ul li {
     margin: 10px 0;
     text-align: left;
   }
 
-  #check:checked ~ header nav ul li a {
+  #check:checked~header nav ul li a {
     color: black;
     text-decoration: none;
     font-size: 16px;
@@ -297,7 +305,7 @@ ol {
     display: inline-block;
   }
 
-  #check:checked ~ header nav ul li a:hover {
+  #check:checked~header nav ul li a:hover {
     color: #b1127e;
   }
 
